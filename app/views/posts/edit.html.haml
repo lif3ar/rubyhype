@@ -1,8 +1,8 @@
-%h1 Create post
+%h1 Edit post
 
 = simple_form_for @post do |f|
   = f.input :title
   = f.input :link
   = f.input :description
 
-  = f.submit "Create post", class: "button"
+  = f.submit "Save changes", class: "button"
