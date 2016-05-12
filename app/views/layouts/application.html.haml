@@ -20,4 +20,5 @@
           = link_to "Sign up", new_user_registration_path, class: "button"
   %p.notice= notice
   %p.alert= alert
-  = yield
+  .wrapper
+    = yield

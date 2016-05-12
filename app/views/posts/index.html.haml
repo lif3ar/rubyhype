@@ -1,5 +1,17 @@
-%h1 All Posts
-
-= render @posts
+- if user_signed_in?
+  %p#intro
+    Welcome
+    = current_user.name
+    %br/
+    %span
+      Express your idea into a post!
+- else
+  %p#intro
+    Have an idea?
+    %br/
+    %span
+      Sign up and share it!
+#posts
+  = render @posts
 %p= link_to "Create post", new_post_path
 %p= link_to "Log out", destroy_user_session_path, method: :delete
