@@ -13,6 +13,7 @@ gem 'devise'
 gem "paperclip", "~> 5.0.0.beta1"
 gem 'simple_form'
 gem 'haml', '~> 4.0.5'
+gem 'acts_as_votable', '~> 0.10.0'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
