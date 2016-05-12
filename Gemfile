@@ -13,7 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem "paperclip", "~> 5.0.0.beta1"
 gem 'simple_form'
-
+gem 'haml', '~> 4.0.5'
 group :development, :test do
   gem 'byebug'
 end
