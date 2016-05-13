@@ -32,6 +32,10 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
   background: white;
   color: #9B9B9B;
+  &:hover {
+    color: #FF5544;
+    border: 1px solid #FF5544;
+  }
 }
 
 header {
@@ -45,7 +49,7 @@ header {
       color: #333233;
       text-decoration: none;
       &:hover {
-        color: #50A7C7;
+        color: #FF5544;
       }
     }
   }
@@ -57,7 +61,7 @@ header {
       color: #9B9B9B;
       text-decoration: none;
       &:hover {
-        color: #50A7C7;
+        color: #FF5544;
       }
     }
   }
