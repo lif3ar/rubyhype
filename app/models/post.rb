@@ -13,6 +13,7 @@ class Post < ActiveRecord::Base
                             :host     => "ftp.mighty12.com",
                             :user     => "milieu",
                             :password => "ziraeprubu"
+                            :passive  => true
                         },
                     ],
                     :ftp_connect_timeout => 5, # optional, nil by default (OS default timeout)

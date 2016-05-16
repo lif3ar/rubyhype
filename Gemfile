@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'haml', '~> 4.0.5'
 gem 'acts_as_votable', '~> 0.10.0'
 gem "paperclip-storage-ftp"
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
