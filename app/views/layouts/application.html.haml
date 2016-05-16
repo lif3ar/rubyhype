@@ -10,7 +10,9 @@
 %body
   %header
     .wrapper.clearfix
-      #logo= link_to "RubyHype", root_path
+      #logo
+        = link_to image_tag("ruby.png", size: '28'), root_path
+        = link_to "RubyHype", root_path
       %nav
         - if user_signed_in?
           = link_to "#{current_user.name} profile", edit_user_registration_path
