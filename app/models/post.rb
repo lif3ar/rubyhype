@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
                         {
                             :host     => "ftp.mighty12.com",
                             :user     => "milieu",
-                            :password => "ziraeprubu"
+                            :password => "ziraeprubu",
                             :passive  => true
                         },
                     ],
