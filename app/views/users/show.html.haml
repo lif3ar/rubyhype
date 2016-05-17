@@ -1,0 +1,10 @@
+.form-main
+  .avatar-show
+    = image_tag @user.avatar.url(:medium), class: "avatar-medium"
+  %h2= "#{@user.name}'s profile"
+  %ul
+    %h3 User posts:
+    - @user.posts.each do |post|
+      %p= link_to post.title, post
+    - if current_user.id == @user.id
+      = link_to "Edit profile", edit_user_registration_path, class: "button"

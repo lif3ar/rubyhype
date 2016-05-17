@@ -68,7 +68,12 @@ header {
   }
 }
 
+.main-2 {
+  padding-bottom: 5em;
+}
+
 @import 'home.css.scss';
 @import 'posts.css.scss';
 @import 'forms.css.scss';
 @import 'placeholders.css.scss';
+@import 'avatar.css.scss';

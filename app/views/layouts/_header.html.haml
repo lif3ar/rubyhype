@@ -5,8 +5,13 @@
       = link_to "RubyHype", root_path
     %nav
       - if user_signed_in?
-        = link_to "#{current_user.name} profile", edit_user_registration_path
         = link_to "Log out", destroy_user_session_path, method: :delete
+        - if current_user.avatar?
+          = link_to current_user do
+            My profile
+            = image_tag(current_user.avatar.url(:small), class: "avatar-small")
+        - else
+          = link_to "My profile", current_user
         = link_to "Add new post", new_post_path, class: "button"
       - else
         = link_to "Log in", new_user_session_path

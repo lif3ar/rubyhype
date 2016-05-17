@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   root 'posts#index'
-
+  resources :users
   resources :posts do
     member do
       get "like", to: "posts#upvote"
