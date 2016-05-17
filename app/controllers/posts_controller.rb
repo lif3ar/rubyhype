@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   require "paperclip/storage/ftp"
   before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
-  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @posts = Post.all.order('created_at DESC')
@@ -13,7 +12,9 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.user_id = current_user.id
+    if user_signed_in?
+      @post.user_id = current_user.id
+    end
     if @post.save
       redirect_to @post
     else
