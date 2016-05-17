@@ -1,0 +1,15 @@
+= simple_form_for(resource, as: resource_name,
+url: session_path(resource_name),
+html: { class: 'form-main', role: "form" }) do |f|
+  %h2 Log in
+  .form-fields
+    = f.text_field :email, placeholder: " Email", autofocus: true,
+    class: "form-text-field"
+  .form-fields
+    = f.text_field :password, placeholder: " Password", class: "form-text-field"
+  .form-fields
+    = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+  .form-fields
+    = f.submit "Log in", class: "button"
+  .form-fields
+    = render "devise/shared/links"

@@ -1,21 +1,18 @@
-.form {
-  background-color: #ffff00;
-  .register-input {
-    display: block !important;
-    width: 100% !important;
-    height: 38px !important;
-    margin-top: 2px !important;
-    font-weight: 500 !important;
-    background: none !important;
-    border: 0 !important;
-    outline: none;
-    border-bottom: 1px solid #d8d8d8;
+.form-main {
+  padding-left: 33.333333%;
+  width: 33.3333333%;
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 1em;
   }
-  .register-input:focus {
-    border-color: #1e9ce6;
-    outline: 0;
-  }
-  .input {
-    outline: none;
+  .form-fields {
+
+    padding-bottom: 2em;
+    .form-text-field {
+      width: 100%;
+      font-size: 1.6em;
+      padding: 0.3em;
+    }
   }
 }

@@ -1,0 +1,29 @@
+= simple_form_for(resource, as: resource_name,
+url: registration_path(resource_name),
+html: { method: :put, class: 'form-main', role: "form" }) do |f|
+  = f.error_notification
+  %h2 Edit your profile
+  .form-fields
+    = f.text_field :name, autofocus: true, class: "form-text-field",
+    placeholder: " Name"
+  .form-fields
+    = f.text_field :email, placeholder: " Email", class: "form-text-field"
+  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+    %p Currently waiting confirmation for:
+    = resource.unconfirmed_email
+  .form-fields
+    = f.text_field :password, placeholder: " Password", class: "form-text-field",
+    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
+  .form-fields
+    = f.text_field :password_confirmation, placeholder: " Password confirmation",
+    class: "form-text-field"
+  .form-fields
+    = f.text_field :current_password,
+    placeholder: " Put your current password to confirm your changes",
+    class: "form-text-field"
+  .form-fields
+    = f.submit "Save changes", class: "button"
+
+  %h3 Unhappy?
+  = link_to "Delete my account", registration_path(resource_name),
+  data: { confirm: "Are you sure?" }, method: :delete

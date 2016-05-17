@@ -1,3 +1,14 @@
+= simple_form_for(resource, as: resource_name, url: password_path(resource_name),
+html: { method: :put, class: "form-main" role: "form" }) do |f|
+  %h2 Change your password
+  = f.error_notification
+  .form-fields
+    = f.text_field :reset_password_token, autofocus: true, class: "form-text-field"
+  .form-fields
+    = f.submit "Send me reset password instructions", class: "button"
+  = render "devise/shared/links"
+
+
 <h2>Change your password</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>

@@ -1,0 +1,19 @@
+= simple_form_for(resource, as: resource_name,
+url: registration_path(resource_name),
+html: { class: 'form-main', role: "form" }) do |f|
+  = f.error_notification
+  %h2 Sign up for RubyHype
+  .form-fields
+    = f.text_field :name, autofocus: true, class: "form-text-field",
+    placeholder: " Name"
+  .form-fields
+    = f.text_field :email, placeholder: " Email", class: "form-text-field"
+  .form-fields
+    = f.text_field :password, placeholder: " Password", class: "form-text-field",
+    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
+  .form-fields
+    = f.text_field :password_confirmation, placeholder: " Password confirmation",
+    class: "form-text-field"
+  .form-fields
+    = f.submit "Sign up", class: "button"
+  = render "devise/shared/links"
