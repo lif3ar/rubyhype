@@ -2,8 +2,9 @@
 url: registration_path(resource_name),
 html: { method: :put, class: 'form-main', role: "form" }) do |f|
   = f.error_notification
-  .avatar-show
-    = image_tag current_user.avatar.url(:medium), class: "avatar-medium"
+  - if @user.avatar?
+    .avatar-show
+      = image_tag current_user.avatar.url(:medium), class: "avatar-medium"
   %h2 Edit your profile
   .form-fields
     <br/>
