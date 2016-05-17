@@ -1,9 +1,15 @@
-%h1 Edit post
-
-= simple_form_for @post do |f|
-  = f.input :image
-  = f.input :title
-  = f.input :link
-  = f.input :description
-
+= simple_form_for(@post, html: { class: "form-main", role: "form" }) do |f|
+  %h2 Create new post
+  .form-fields
+    = f.label "Add post cover-image:"
+    <br/>
+    = f.file_field :image
+  .form-fields
+    = f.text_field :title, placeholder: "Post title", class: "form-text-field"
+  .form-fields
+    = f.text_field :link, placeholder: "Link to original publication",
+    class: "form-text-field"
+  .form-fields
+    = f.text_area :description, placeholder: "Description",
+    class: "form-text-field"
   = f.submit "Save changes", class: "button"
