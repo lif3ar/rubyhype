@@ -2,10 +2,7 @@
   %h1= @post.title
   %p.username
     Share by
-    - if @post.user.name?
-      = @post.user.name
-    - else
-
+    = @post.user.name
     about
     = time_ago_in_words(@post.created_at)
     ago

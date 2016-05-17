@@ -12,7 +12,7 @@
             = image_tag(current_user.avatar.url(:small), class: "avatar-small")
         - else
           = link_to "My profile", current_user
+        = link_to "Add new post", new_post_path, class: "button"
       - else
         = link_to "Log in", new_user_session_path
         = link_to "Sign up", new_user_registration_path, class: "button"
-      = link_to "Add new post", new_post_path, class: "button"
